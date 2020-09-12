@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+.contact-page {
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: grid;
+    
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.form-center {
+    padding:20px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-center > .name {
+    margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-center > .email {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-center > .message {
+    margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-center > .button {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
 }
+
+
+
