@@ -9,6 +9,7 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.3.1",
     "emailjs": "^3.3.0",
+    "emailjs-com": "^2.6.3",
     "firebase": "^7.19.1",
     "install": "^0.13.0",
     "node-sass": "^4.14.1",
@@ -17,7 +18,8 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.4.3",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
