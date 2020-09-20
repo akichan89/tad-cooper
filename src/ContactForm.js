@@ -1,25 +1,16 @@
-
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import './App.css';
 import React, { Component } from 'react';
 import axios from 'axios';
-import * as emailjs from 'emailjs-com';
 
-export default class ContactForm extends Component {
+class ContactForm extends Component {
   constructor() {
     super();
     this.state = {
       fname: '',
       lname: '',
       email: '',
-      message: '',
-      apiUrl: 'https://api.emailjs.com/api/v1.0/email/send-form',
-      apiAction: "post"
+      message:'',
     };
-
   }
-
-  
 
   onChange = (e) => {
     /*
@@ -30,15 +21,15 @@ export default class ContactForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  onSubmit = (e, {resetForm}) => {
-    axios({
-      method: this.state.apiAction,
-      url: this.state.apiUrl,
-   
-     
+  onSubmit = (e) => {
+    e.preventDefault();
+    // get our form data out of state
+    const { fname, lname, email, message } = this.state;
+
+    axios.post('/', { fname, lname, email, message })
+      .then((result) => {
         //access the results here....
       });
-      resetForm({})
   }
 
   render() {
@@ -48,33 +39,31 @@ export default class ContactForm extends Component {
         <input
           type="text"
           name="fname"
-          placeholder="First Name"
           value={fname}
           onChange={this.onChange}
         />
         <input
           type="text"
           name="lname"
-          placeholder="Last Name"
           value={lname}
           onChange={this.onChange}
         />
         <input
           type="text"
           name="email"
-          placeholder="Your email"
           value={email}
           onChange={this.onChange}
         />
         <input
-          type="textarea"
+          type="text"
           name="message"
-          placeholder="Message"
           value={message}
           onChange={this.onChange}
         />
-        <button className="btn" type="submit">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     );
   }
 }
+
+export default ContactForm

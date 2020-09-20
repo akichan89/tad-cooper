@@ -11,7 +11,7 @@ import { Home } from './Home';
 import { About } from './About';
 
 import Sidebar from './components/Sidebar';
-import { Order } from './Order';
+import Order from './Order';
 
 import { FooterBar } from './components/Footer';
 

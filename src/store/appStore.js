@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Nav from './store/nav';
-import './store/style/app.scss';
-import ItemPage from './store/itemPage';
-import CartPage from './store/CartPage';
-import { items } from './store/static-data';
+import Nav from './nav';
+import './style/app.scss';
+import ItemPage from './itemPage';
+import CartPage from './CartPage';
+import { items } from './static-data';
 
 const summmarizeCart = cart => {
   const groupedItems = cart.reduce((summary, item) => {
